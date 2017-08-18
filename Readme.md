@@ -38,6 +38,13 @@ Setup the working environment
 $ python3 -m venv env
 ```
 
+   1a) You may need to install the python3 venv package
+
+   ```bash
+   $ sudo apt-get install python3.4-venv
+   ```
+   
+
 2) Enter the virtualenv
 
 ```bash
@@ -49,6 +56,13 @@ $ source env/bin/activate
 ```bash
 (env)$ pip install nikola
 ```
+
+4) Install Nikola orgmode plugin
+
+```bash
+(env)$ nikola plugin -i orgmode
+
+
 
 Building the Documents
 -----------------------
@@ -84,6 +98,13 @@ Title: First
 Scanning posts........done!
 [2017-08-17T16:16:18Z] INFO: new_post: Your post's text is at: posts/first.rst
 ```
+
+or using orgmode
+```bash
+(env)$ nikola new_post -f orgmode
+...
+```
+
 
 TODO
 ====
