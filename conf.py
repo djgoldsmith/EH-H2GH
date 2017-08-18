@@ -21,7 +21,7 @@ BLOG_AUTHOR = "Dang & Digehode"  # (translatable)
 BLOG_TITLE = "HitchHikers guide to Ethical Hacking"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "http://127.0.0.1/"
+SITE_URL = "http://127.0.0.1:8000"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
