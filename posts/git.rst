@@ -12,6 +12,10 @@
 Git 
 ===
 
+Introduction to using GIT filecontrol
+
+.. TEASER_END
+
 General Terminology
 ===================
 
