@@ -38,12 +38,13 @@ Setup the working environment
 $ python3 -m venv env
 ```
 
-   1a) You may need to install the python3 venv package
+   1a) IF this Fails You may need to install the python3 venv package
 
    ```bash
-   $ sudo apt-get install python3.4-venv
+   $ sudo apt-get install python3-venv
    ```
-   
+
+
 
 2) Enter the virtualenv
 
@@ -67,8 +68,7 @@ $ source env/bin/activate
 Building the Documents
 -----------------------
 
-The documents can be compiled using the makefile.
-Several build options exist, but for the moment we will use HTML
+The documents can be compiled using nikola
 
 ```bash
 (env)$ nikola build
