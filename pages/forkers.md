@@ -22,3 +22,4 @@ Happy Forkers
 --------------
 And those that have Forked the Repo
 
+ - Dan Goldsmith (dang)
