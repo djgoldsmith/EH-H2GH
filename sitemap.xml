@@ -6,47 +6,47 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>http://127.0.0.1:8000/</loc>
+  <loc>/</loc>
   <lastmod>2017-11-02T10:53:00Z</lastmod>
  </url>
  <url>
-  <loc>http://127.0.0.1:8000/2017/</loc>
+  <loc>/2017/</loc>
   <lastmod>2017-11-02T10:07:00Z</lastmod>
  </url>
  <url>
-  <loc>http://127.0.0.1:8000/archive.html</loc>
-  <lastmod>2017-11-02T11:13:00Z</lastmod>
+  <loc>/archive.html</loc>
+  <lastmod>2017-11-02T12:17:00Z</lastmod>
  </url>
  <url>
-  <loc>http://127.0.0.1:8000/categories/</loc>
+  <loc>/categories/</loc>
   <lastmod>2017-11-02T10:07:00Z</lastmod>
  </url>
  <url>
-  <loc>http://127.0.0.1:8000/categories/git/</loc>
+  <loc>/categories/git/</loc>
   <lastmod>2017-11-02T10:07:00Z</lastmod>
  </url>
  <url>
-  <loc>http://127.0.0.1:8000/categories/nmap/</loc>
+  <loc>/categories/nmap/</loc>
   <lastmod>2017-11-02T10:07:00Z</lastmod>
  </url>
  <url>
-  <loc>http://127.0.0.1:8000/categories/recon/</loc>
+  <loc>/categories/recon/</loc>
   <lastmod>2017-11-02T10:07:00Z</lastmod>
  </url>
  <url>
-  <loc>http://127.0.0.1:8000/posts/</loc>
+  <loc>/posts/</loc>
   <lastmod>2017-11-02T10:53:00Z</lastmod>
  </url>
  <url>
-  <loc>http://127.0.0.1:8000/posts/git/</loc>
+  <loc>/posts/git/</loc>
   <lastmod>2017-11-02T10:07:00Z</lastmod>
  </url>
  <url>
-  <loc>http://127.0.0.1:8000/posts/nikola-guide/</loc>
+  <loc>/posts/nikola-guide/</loc>
   <lastmod>2017-11-02T10:07:00Z</lastmod>
  </url>
  <url>
-  <loc>http://127.0.0.1:8000/posts/recon/nmap/</loc>
+  <loc>/posts/recon/nmap/</loc>
   <lastmod>2017-11-02T10:07:00Z</lastmod>
  </url>
 </urlset>
