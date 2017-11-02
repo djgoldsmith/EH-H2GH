@@ -5,3 +5,6 @@
 env
 plugins
 output
+.doit.db.db
+__pycache__
+cache/
