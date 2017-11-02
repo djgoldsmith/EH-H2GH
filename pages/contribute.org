@@ -1,0 +1,108 @@
+#+BEGIN_COMMENT
+.. title: Contribute to the Guide
+.. slug: contribute
+.. date: 2017-11-02 13:46:04 UTC
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+.. author: dang
+#+END_COMMENT
+
+Anyone is welcome to contribute to the guide.  
+We all have our own speciality, and by writing a post you will get to share your knolwege of a subject.
+
+Contributing doesn't have to be creating new content,  editing and adding to existing content is equally important.
+
+Equally, you can just fork the whole thing and create your own guide, (although its always nice to give something back to the community)
+
+* Contribution Process.
+
+ - Fork a copy of the Main Repository
+ - <Work>
+ - When you have finished submit a pull request
+ - Your new content will be merged into the guide
+
+#+BEGIN_EXAMPLE
+*NOTE:*
+
+The git commands in this example make use of the command line (as I find it easier, and infinately more productive), 
+Take time to learn the commands, of if you feel particually sadomashicistic, Google can help you
+learn the GUI versions.
+
+*NOTE2:
+The exmple is also based on Linux, (as I find it Easier and infinately more productive),
+Take time to learn Linux, or if you feel particually sadomachicistic, Google can help you translate to Windows.
+#+END_EXAMPLE
+
+* The Setup:  Bring our the GIT
+
+The first stage is to get a copy of the repository to work in. There
+are 101 git workflows (even github itself has no clear consensus), so
+I will describe the one I perfer to use, which is the *fork* based
+flow.
+
+More details on Git and its workflows can be found in the [[./posts/git][Git posts]]
+
+** Create a Github Account
+
+ - This should be self explanatory go to:  [[https://github.com]]  and follow the instructions
+ - Recommened Step:  Setup some SSH Keys [[https://help.github.com/articles/connecting-to-github-with-ssh/]]
+
+** Forking the Repository
+#+BEGIN_EXAMPLE
+*NOTE*x
+If you wish, you can work in the main repository rather than a fork of it.  HOWEVER: you will need to create your own branches, as the staging and master branches are protected.
+In this case Feel free to skip this step
+#+END_EXAMPLE 
+
+
+The first stage is to create a *fork* of the main repository, this will
+give you a copy of the main repository to work in (without distraction
+from other users). The workflow is similar to [[https://gist.github.com/Chaser324/ce0505fbed06b947d962][the one given here]]
+
+On the main [[https://github.com/djgoldsmith/EH-H2GH][EH-H2GH]] page, click the "Fork" button,  this will create a new version of the repo at <YOURUSER>/EH-H2GH.
+
+You can now *clone* the new repository to the local machine:
+
+  - In Github click the *clone or download* button and copy the link provied
+
+#+BEGIN_SRC bash
+git clone <LINK>
+#+END_SRC
+
+** Keeping the Fork up to date
+
+As the main repository will be being modified, it is good to be able to incorporate these changes in your  own version.
+We can do this by tracking the original *upstream* repository
+
+#+BEGIN_SRC bash
+#Add the Upstram repository
+git remote add upstream https://github.com/djgoldsmith/EH-H2GH.git
+
+#And verify this worked
+git remote -v
+#+END_SRC
+
+When it comes to updating the fork, first fetch the upstream repo's branches and commits
+
+#+BEGIN_SRC bash
+#Fetch upstream data
+git fetch upstream
+#+END_SRC
+
+You can then Synchronsie the *master* and *staging* branches with the up to date version.
+
+#+BEGIN_SRC bash
+git checkout master
+git merge upstream/master
+
+git checkout staging
+git merge upstream/staging
+#+END_SRC
+
+
+* The Setup 2: Getting Nikola Ready
+
+Pages are Generated using the Nikola static site generator.

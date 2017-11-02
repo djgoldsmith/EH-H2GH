@@ -22,15 +22,37 @@ First, it is slightly cheaper; and secondly it has the words DON'T PANIC inscrib
 * About
 A Repository for Guides, cheetsheets, and other things generate by staff and students of the CUEH course.
 
-<BLAH>
+There are two types of content:
 
-There are two main sections
+** Articles
+
+More structured content, it may be a series of posts dealing with a specific subject.
+Or writeup related to course content.  
+
+For the moment Articles will be dealt with by an admin team.  
+
+An Article index can be found [[./articles][here]]
+
 
 ** Posts
 
 Blog like posts on specific topics.  You can get a list of them at [[./posts]]
 
-** Articles
+Posts are intended to be a little more ad-hoc, if appropriate, posts
+will be gathered up and turned into an article series.
 
-More structured content, it may be a series of posts dealing with a specific subject.
-Or writeup related to course content.
+If you have a sbject you want to let others know about.  Feel free to [[./contribute][contribute]]
+
+* Contributing
+
+There are many subject areas we need to cover, and each person has their own speciality.
+Feel free to contribute to the guide:
+
+  - Create your own posts
+    - Create a series of posts that can be published as an article
+  - Edit other peoples work
+    - Fix errors
+    - Add more content
+
+Instructions on how to contribute can be found [[./contribute][here]]
+
