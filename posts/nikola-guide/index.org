@@ -1,0 +1,82 @@
+#+BEGIN_COMMENT
+.. title: Nikola Guide
+.. slug: nikola-guide
+.. date: 2017-08-18 07:50:19 UTC
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+.. author: Dang
+#+END_COMMENT
+
+#+OPTIONS: ^:nil
+
+Nikola is used to generate nice(er) looking static sites from markup language (org, markdown etc) documents
+Notes for Org mode and Nikola
+
+{{{TEASER_END}}}
+
+* Creating Pages
+
+#+BEGIN_SRC sh
+#Automagically collected posts
+(env)$nikola new_post -f orgmode <path>
+
+#For a more tradtional page based site
+(env)$nikola new_page -f orgmode <path>
+#+END_SRC
+
+** Standard header
+ - Title (Page title itself)
+ - Slug  (Page URL)
+
+** Teaser
+Cuts off the content on the main index page
+
+#+BEGIN_SRC orgmode
+Nikola is used to generate nice(er) looking static sites from markup language (org, markdown etc) documents
+Notes for Org mode and Nikola
+
+{{{TEASER_END}}}
+#+END_SRC
+
+* Content
+- Headings are as per standard org mode export. 
+- Bullets work also 
+
+** Source Code
+Pygments is used, so some of the standard org-babel codes don't work.
+
+ - Bash == sh
+
+#+BEGIN_EXAMPLE
+#+BEGIN_SRC sh
+$ls -l
+#+END_SRC
+#+END_EXAMPLE
+
+** Adding Class level formatting
+
+#+BEGIN_EXAMPLE
+#+ATTR_HTML: :class table table-striped
+#+END_EXAMPLE
+
+** Tables
+
+Getting the nicer bootstrap formatting
+
+#+BEGIN_EXAMPLE
+#+ATTR_HTML: :class table table-striped
+| Foo | Bar |
+|-----+-----|
+|   1 |   2 |
+|   3 |   4 |
+
+#+END_EXAMPLE
+
+#+ATTR_HTML: :class table table-striped
+| Foo | Bar |
+|-----+-----|
+|   1 |   2 |
+|   3 |   4 |

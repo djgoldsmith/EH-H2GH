@@ -1,0 +1,65 @@
+#+BEGIN_COMMENT
+.. title: Reconnaissance:  Nmap
+.. slug: nmap
+.. date: 2017-08-17 16:26:04 UTC
+.. tags: recon, nmap
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+.. author: Dang
+#+END_COMMENT
+
+#+OPTIONS: ^:nil
+
+
+Finding remote machines and the services that run on them.
+
+
+{{{TEASER_END}}}
+
+* NMAP
+
+Used to scan for services.
+
+Impoprtant stuff to rememebr is the *-sN* (no DNS lookup as it really sucks in the lab)
+Nmap for this.  My own method is to do
+
+** Scan for Machines
+
+This is pretty quick, and gives a nice idea of what is about
+
+#+BEGIN_SRC sh
+nmap -n --top-ports=100 192.168.0.1-255
+#+END_SRC
+
+  
+** Output to files
+
+Good with Grep and friends.
+
+
+
+* NSE
+
+Loads at 
+
+Nikto like scan of web
+
+Anonymous FTP
+
+Samba
+
+
+* Web Apps
+
+
+* Post Exploit
+
+
+
+** Nix
+
+** Dohs
+
+
