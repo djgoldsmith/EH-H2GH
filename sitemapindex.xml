@@ -6,23 +6,23 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://127.0.0.1:8000/categories/git.xml</loc>
-  <lastmod>2017-11-02T10:07:00Z</lastmod>
+  <loc>http://djgoldsmith.github.io/EH-H2GH/categories/git.xml</loc>
+  <lastmod>2017-11-02T12:36:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/categories/nmap.xml</loc>
-  <lastmod>2017-11-02T10:07:00Z</lastmod>
+  <loc>http://djgoldsmith.github.io/EH-H2GH/categories/nmap.xml</loc>
+  <lastmod>2017-11-02T12:36:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/categories/recon.xml</loc>
-  <lastmod>2017-11-02T10:07:00Z</lastmod>
+  <loc>http://djgoldsmith.github.io/EH-H2GH/categories/recon.xml</loc>
+  <lastmod>2017-11-02T12:36:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/rss.xml</loc>
-  <lastmod>2017-11-02T10:07:00Z</lastmod>
+  <loc>http://djgoldsmith.github.io/EH-H2GH/rss.xml</loc>
+  <lastmod>2017-11-02T12:36:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/sitemap.xml</loc>
-  <lastmod>2017-11-02T11:13:00Z</lastmod>
+  <loc>http://djgoldsmith.github.io/EH-H2GH/sitemap.xml</loc>
+  <lastmod>2017-11-02T12:36:00Z</lastmod>
  </sitemap>
 </sitemapindex>
