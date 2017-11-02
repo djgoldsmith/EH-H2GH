@@ -1,5 +1,5 @@
 #+BEGIN_COMMENT
-.. title: index
+.. title: Hitchikers Guide to Ethical Hacking
 .. slug: index
 .. date: 2017-11-02 10:43:27 UTC
 .. tags: 
@@ -9,5 +9,16 @@
 .. type: text
 #+END_COMMENT
 
+#+BEGIN_QUOTE
+Not only is it a wholly remarkable book, it is also a highly successful one – more popular than the Celestial Home Care Omnibus, better selling than Fifty-three More Things to do in Zero Gravity, and more controversial than Oolon Colluphid's trilogy of philosophical blockbusters Where God Went Wrong, Some More of God's Greatest Mistakes and Who is this God Person Anyway?
 
-Write your page here.
+In many of the more relaxed civilizations on the Outer Eastern Rim of the Galaxy, the Hitch-Hiker's Guide has already supplanted the great Encyclopaedia Galactica as the standard repository of all knowledge and wisdom, for though it has many omissions and contains much that is apocryphal, or at least wildly inaccurate, it scores over the older, more pedestrian work in two important respects.
+
+First, it is slightly cheaper; and secondly it has the words DON'T PANIC inscribed in large friendly letters on its cover.” 
+
+*- Douglas Adams, The Hitchhiker's Guide to the Galaxy*
+#+END_QUOTE
+
+* About
+A Repository for Guides, cheetsheets, and other things generate by staff and students of the CUEH course.
+
