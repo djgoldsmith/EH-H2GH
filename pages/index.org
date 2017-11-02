@@ -22,3 +22,15 @@ First, it is slightly cheaper; and secondly it has the words DON'T PANIC inscrib
 * About
 A Repository for Guides, cheetsheets, and other things generate by staff and students of the CUEH course.
 
+<BLAH>
+
+There are two main sections
+
+** Posts
+
+Blog like posts on specific topics.  You can get a list of them at [[./posts]]
+
+** Articles
+
+More structured content, it may be a series of posts dealing with a specific subject.
+Or writeup related to course content.
