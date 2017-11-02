@@ -182,3 +182,12 @@ This will bring up a screen that allows you to check the review you have made, b
 
 
 
+Scratch
+--------
+
+Workflows can be found here
+
+
+https://guides.github.com/introduction/flow/
+https://guides.github.com/activities/forking/
+https://gist.github.com/Chaser324/ce0505fbed06b947d962

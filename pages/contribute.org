@@ -36,7 +36,7 @@ The exmple is also based on Linux, (as I find it Easier and infinately more prod
 Take time to learn Linux, or if you feel particually sadomachicistic, Google can help you translate to Windows.
 #+END_EXAMPLE
 
-* The Setup:  Bring our the GIT
+* The Setup:  Bring out the GIT
 
 The first stage is to get a copy of the repository to work in. There
 are 101 git workflows (even github itself has no clear consensus), so
@@ -52,7 +52,7 @@ More details on Git and its workflows can be found in the [[./posts/git][Git pos
 
 ** Forking the Repository
 #+BEGIN_EXAMPLE
-*NOTE*x
+*NOTE*
 If you wish, you can work in the main repository rather than a fork of it.  HOWEVER: you will need to create your own branches, as the staging and master branches are protected.
 In this case Feel free to skip this step
 #+END_EXAMPLE 
@@ -103,6 +103,125 @@ git merge upstream/staging
 #+END_SRC
 
 
-* The Setup 2: Getting Nikola Ready
+* The Setup 2: Nikola
 
-Pages are Generated using the Nikola static site generator.
+Pages are Generated using the [[https://getnikola.com/][Nikola]] static site generator.  
+As adding Nikola to the Git would be a BadThing(TM) you will also need to have a local version
+on your machine.
+
+
+** Installing Nikola
+#+BEGIN_EXAMPLE
+I like to sandbox everything, so make use of pythons virtualenv feature to do this.
+You can skip the virtualenv steps if you wish
+#+END_EXAMPLE
+
+#. Install Vritualenv
+
+  #+BEGIN_SRC bash
+  sudo apt-get install python3-venv
+  #+END_SRC
+
+#. Create a new Env
+
+  In the base Nikola directory create a new virtual env
+
+  #+BEGIN_SRC bash
+  python3 -m venv env
+  #+END_SRC
+
+#. Enter the Virtual Env
+
+  #+BEGIN_SRC bash
+  $source env/bin/activate
+
+  #The prompt should change to 
+  (env)$
+  #+END_SRC
+
+#. Install Nikola and Required Plugins
+
+  #+BEGIN_SRC bash
+  (env)$ pip install nikola
+  ... <snip> ..
+  (env)$ nikola plugin -i orgmode
+  #+END_SRC
+
+
+** Working with Nikola
+
+Each time you wish to work with nikola you need to enter the virtualenv
+
+#+BEGIN_SRC bash
+$source env/bin/activate
+(env)$
+#+END_SRC
+
+
+You can then build the page with
+
+#+BEGIN_SRC bash
+(env)$nikola build
+#+END_SRC
+
+And fire up a local webserver to see the results as [[localhost:8000]]
+
+#+BEGIN_SRC bash
+(env)$nikola serve
+#+END_SRC
+
+
+* Branching and Pulling
+
+Once we have a working system, we can get ready to contribute.  
+
+As we are using a standard Git Workflow, we first need to get some prep work done.
+
+#+BEGIN_EXAMPLE
+A standard GIT workflow is to have several *branches* of work within
+each repository.  This aviods new code (or content) being added to the
+main repository (usually called the Trunk or Master) at a whim, which
+could potentially break a system.
+
+To help with this GIT has the concept of branches. I tend to think of
+these as mini forks, that allow you to work on content in its own
+sandboxed environment without affecting the main codebase.
+
+Standard practice is to have a branch for each new *feature* you wish to add.
+Once work is copleted (and testing done) the branch is *merged* back into the main repositoy.
+
+For The Guide, we have two main branches:
+
+  - Master.   The "Release" version of the guide.  This is what the main documentation is generated from. 
+  - Staging   Think of this as the *dev* branch.  Where changes are merged, and problems solved before a release.
+
+Both are protected, so you shouldnt be able to accidently check code in without a *pull request*.
+#+END_EXAMPLE
+
+As we wish to add new content, we create a new *feature branch*.  
+
+First we tell git we want to make a new branch.  Then *checkout* the branch content
+
+#+BEGIN_SRC bash
+
+$git branch <name>
+$git checkout <name>
+
+#Check which branch we are in
+$ git branch
+* dg-initcontent
+  gh-pages
+  master
+  staging
+#+END_SRC
+
+Lets follow this through with an example,  and add outselves as a contributer to the guide.
+
+WE first create a feature branch using a sensible name
+#+BEGIN_EXAMPLE
+
+#+END_EXAMPLE
+
+* Adding New Pages
+
+
