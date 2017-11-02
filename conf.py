@@ -21,7 +21,7 @@ BLOG_AUTHOR = "CUEH"  # (translatable)
 BLOG_TITLE = "HitchHikers guide to Ethical Hacking"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "http://127.0.0.1:8000/"
+SITE_URL = "http://djgoldsmith.github.io/EH-H2GH/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
@@ -134,6 +134,8 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/","Articles"),
+        ("/posts","Posts"),
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
@@ -189,13 +191,14 @@ POSTS = (
     ("posts/*.org", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.rst", "pages", "page.tmpl"),
-    ("pages/*.md", "pages", "page.tmpl"),
-    ("pages/*.txt", "pages", "page.tmpl"),
-    ("pages/*.html", "pages", "page.tmpl"),
-    ("pages/*.org", "pages", "page.tmpl"),
+    ("pages/*.rst", "", "page.tmpl"),
+    ("pages/*.md", "", "page.tmpl"),
+    ("pages/*.txt", "", "page.tmpl"),
+    ("pages/*.html", "", "page.tmpl"),
+    ("pages/*.org", "", "page.tmpl"),
 )
 
+INDEX_PATH="posts"
 
 # Below this point, everything is optional
 
@@ -643,14 +646,15 @@ REDIRECTIONS = []
 # https://getnikola.com/handbook.html#deploying-to-github
 # You will need to configure the deployment branch on GitHub.
 GITHUB_SOURCE_BRANCH = 'src'
-GITHUB_DEPLOY_BRANCH = 'master'
+GITHUB_DEPLOY_BRANCH = 'gh-pages'
 
 # The name of the remote where you wish to push to, using github_deploy.
 GITHUB_REMOTE_NAME = 'origin'
 
 # Whether or not github_deploy should commit to the source branch automatically
+
 # before deploying.
-GITHUB_COMMIT_SOURCE = True
+GITHUB_COMMIT_SOURCE = False
 
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
