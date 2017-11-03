@@ -362,7 +362,9 @@ Thn hit the *new pull request* button.  (There is also a "You have recently push
 NOTE:  A Picture would be good here.  Also get adam to check it works with Forks.
 #+END_EXAMPLE
 
+Complete the  form, and add a sensible comment in the comments box. Then hit the *create pull request* button
 
+TODO:  What happens at Master
 
 
 ** Worked Example:  
