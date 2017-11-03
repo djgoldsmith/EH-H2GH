@@ -198,6 +198,7 @@ For The Guide, we have two main branches:
 Both are protected, so you shouldnt be able to accidently check code in without a *pull request*.
 #+END_EXAMPLE
 
+*** Creating a Branch
 As we wish to add new content, we create a new *feature branch*.  
 
 First we tell git we want to make a new branch.  Then *checkout* the branch content
@@ -215,13 +216,239 @@ $ git branch
   staging
 #+END_SRC
 
-Lets follow this through with an example,  and add outselves as a contributer to the guide.
+*** Doing Some Work
 
-WE first create a feature branch using a sensible name
+Hopefully, this is self explanatory
+We next do whatever work we need to do, so in a software project we would:
+
+  - Write Tests
+  - Write Docs
+  - Write Code
+
+*** Saving our work.
+
+Every so often, we will reach a point where we finish a chunk of work, and wish to save our progress.
+In this case we need to let git know we want to *commit* our changes, which will effectivly take a snapshot of our progress.
+
 #+BEGIN_EXAMPLE
+NOTE:
+In my view, There is no right or wrong time to commit, its a matter of preference.
 
+Sometimes I commit after I finish a function,  other times after completing a block of work that seems logical.
+Apply some common sense, and commit before and after making any major changes. 
 #+END_EXAMPLE
 
-* Adding New Pages
+First we can ask git which files have changed using the /git status/ command.
 
+#+BEGIN_SRC bash
+$ git status
+On branch forking
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   pages/contribute.org
+	modified:   pages/forkers.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+#+END_SRC
+
+Once we review the changes, we can *add* files to the commit using the /git add/ command
+
+
+#+BEGIN_SRC bash
+$git add <filename>
+#+END_SRC
+
+You can also check the *status* again to make sure verything has been updates
+
+#+BEGIN_SRC bash
+$ git status
+On branch forking
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   pages/forkers.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   pages/contribute.org
+#+END_SRC
+
+
+Finally we can *commit* our changes
+
+Use the /git commit -m <sensible message>/ command to do this 
+
+#+BEGIN_SRC bash
+$ git commit -m "Added Dang to the list of contributors"
+[forking 1bf440a] Added Dang to the list of contributors
+ 1 file changed, 1 insertion(+)
+#+END_SRC
+ 
+*** Saving our changes with Github
+
+One of the nice things about Git as a distrubuted VCS is we can work independenly from a central point.
+This means we can make several changes (and commits) on our own machine before we *push* the data to the central  repository (in this case github).
+
+#+BEGIN_EXAMPLE
+This can be a major point of confusion.
+
+Github is a service that hosts *git* based repositories (as well as being a great source of octocat stickers)
+This means it is the central point where we send our data to.  I tend to think of it as a server.
+
+There are several  other services that act as central repositories:
+
+  - Bitbucket is great for allowing private repositorires
+  - GitLab: Is an Open Source version of Github
+  - Private git servers
+
+
+GIT is the protocl each of these repositorys use to manage the data, (think protocol).
+That means while Github is focused on git, there are other systems that will use the same protocol for version control.
+
+
+A reasonable anolgy is HTTP:
+
+ - Apache / Nginx / IIS are the servers (This is the equivient of Github)
+ - The HTTP protocol is what they deal with (This part is GIT)
+#+END_EXAMPLE
+
+
+To make our changes availbe to the rest of the world we will need to *push* them to our central point
+
+If it is the first time we may get an error a couple of errors:
+
+#+BEGIN_NOTE
+You may be asked to configure the username and email for the repository.
+If you are in the lab you may want to use the --local flag rather than the --global one
+
+git config --local user.name <whatever>
+#+END_NOTE
+
+#+BEGIN_SRC bash
+$ git push --set-upstream origin forking
+Counting objects: 23, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (23/23), 5.77 KiB | 0 bytes/s, done.
+Total 23 (delta 11), reused 0 (delta 0)
+remote: Resolving deltas: 100% (11/11), completed with 4 local objects.
+To github.com:djgoldsmith/EH-H2GH.git
+ * [new branch]      forking -> forking
+Branch forking set up to track remote branch forking from origin.
+#+END_SRC
+
+Otherwise a push will  just work.
+
+#+BEGIN_SRC bash
+$git push
+#+END_SRC
+
+You can then keep repeating these steps ad  making changes until you have finished that chunk of work.
+
+*** Merging our changes into the trunk
+
+When we have finished everything, we need a way to merge the changes back into the main repository.
+
+For this we need to make a *pull request*
+
+On Github find your forked version of the repository.  Make sure you have selected the *correct branch* from the dropdown box.
+Thn hit the *new pull request* button.  (There is also a "You have recently pushed branches" popup.
+
+#+BEGIN_EXAMPLE
+NOTE:  A Picture would be good here.  Also get adam to check it works with Forks.
+#+END_EXAMPLE
+
+
+
+
+** Worked Example:  
+Lets follow this through with an example,  and add outselves as a contributer to the guide.
+
+WE first create a feature branch using a "sensible" name using /git branch/
+Then make that the active branch using /git checkout/
+#+BEGIN_SRC bash
+$ git branch forking
+$ git checkout forking
+Switched to branch 'forking'
+#+END_SRC
+
+We can then make changes to the contributers file, and put our name in the hall of fame
+
+Edit *pages/forkers.md* and add your name to the list of people who have forked the repository.
+For the momennt ignore the file contents (that comes later),  just add a dash, and your name in the Happy Forkers section.
+
+#+BEGIN_SRC markdown
+
+Happy Forkers
+--------------
+And those that have Forked the Repo
+
+ - Dan Goldsmith (dang)   
+
+#+END_SRC
+
+
+After saving the file, we check the status
+
+#+BEGIN_SRC bash
+$ git status
+On branch forking
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   pages/contribute.org
+	modified:   pages/forkers.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+#+END_SRC
+
+And add the relevant file, and check it has been added to the commit
+
+#+BEGIN_SRC bash
+$ git add pages/forkers.md 
+(env) dang@dang-laptop:~/Documents/Github/TheGuide/EH-H2GH$ git status
+On branch forking
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   pages/forkers.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   pages/contribute.org
+
+#+END_SRC
+
+After we are done commit the changes to git
+
+#+BEGIN_SRC bash
+$ git commit -m "Added Dang to the list of contributors"
+[forking 1bf440a] Added Dang to the list of contributors
+ 1 file changed, 1 insertion(+)
+#+END_SRC
+ 
+
+And push
+#+BEGIN_SRC bash
+$git push
+Counting objects: 23, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (23/23), 5.77 KiB | 0 bytes/s, done.
+Total 23 (delta 11), reused 0 (delta 0)
+remote: Resolving deltas: 100% (11/11), completed with 4 local objects.
+To github.com:djgoldsmith/EH-H2GH.git
+ * [new branch]      forking -> forking
+Branch forking set up to track remote branch forking from origin.
+#+END_SRC
+
+
+ 
 
