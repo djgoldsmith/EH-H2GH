@@ -4,11 +4,15 @@ Hitchhiker's Guide to Ethical Hacking
 A Field manual created by students and staff on the Coventry University Ethical Hacking course.
 
 
+You can see a rendered version at http://djgoldsmith.github.io/EH-H2GH/
+
 Working On the H2GH
 ====================
 
 Below is an quick overview of how to contribute to the guide. 
 Further details can be found in the guide itself (how meta is that)
+
+http://djgoldsmith.github.io/EH-H2GH/contribute
 
 Getting Started
 ----------------
@@ -62,11 +66,11 @@ $ source env/bin/activate
 
 ```bash
 (env)$ nikola plugin -i orgmode
-
+```
 
 
 Building the Documents
------------------------
+------------------------
 
 The documents can be compiled using nikola
 
@@ -91,6 +95,8 @@ Creating Posts
 
 ```bash
 (env)$ nikola new_post
+
+
 Creating New Post
 -----------------
 
