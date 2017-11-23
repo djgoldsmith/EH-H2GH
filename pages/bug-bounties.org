@@ -1,0 +1,119 @@
+#+BEGIN_COMMENT
+.. title: Bug Bounties
+.. slug: bounties
+.. date: 2017-11-22 18:02:06 UTC
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+Yes, you hoopy froods, its that time you have been waiting for,  bug bounties are now live.
+
+The process is simple:
+
+ 1) Find an vulnerability and demonstrate an exploit in the Lab Images
+ 2) Submit a bug report
+ 3) Do a write up, outlining the problem and the fix
+
+Remember this is a BSc in Ethical hacking, the write up is more
+important than the Hack, If its not reproducible then you lose points.
+Basically, the writeup is key here, lets use it as an opportunity to
+show off your skills to the rest of the world / class.
+
+* What's In Spec
+An Important thing.  What you are have permission to attack
+
+ - Your own machine,  go for it, find imaginative ways of privesc'ing the machines. 
+ - Your mate's lab machine, Fancy some network shenanigans, try to get into the base image on your neighbour
+ - Any of the images that are supplied.  Yes, you have root access for
+   them, but it will be fun seeing if we can go from user to root
+   without knowing the password.
+
+
+* Whats Not In Spec
+The *MOST* important thing.  What you do not have permission to attack
+
+ - *ANY* of the Lab infrastructure (you will get an opportunity, see Other Notes),  So this is:
+    - Imaging Server (192.168.2.128)
+    - File Share     (192.168.2.129)
+    - Forensics Box  (192.168.2.200)
+ - *ANYTHING* outside of the Lab.   
+ - *ANYTHING* that involves (D)DOS. 
+ - The Main Lectern Computer
+
+If in Doubt *ASK*, Remember this stuff is there so you get a good
+experience.  Nothing sucks more than nothing working during deadline
+week, because someone is playing silly buggers.
+
+With Stuff out of the lab ITS / JANET *IS* watching, our internet
+connection is bad enough, if they get the excuse to get shirty about
+it, they will cut us off.
+
+DOS attacks suck, it's script kiddy stuff and affects the rest of the
+course.  Dont be a dick.
+
+Ransomware also Sucks, Remember if the Lab goes down its your time on
+coursework that is screwed.
+
+* Things to think about
+ - Its a piece of cake to get access using physical access, In fact the
+   POC / Writeup has been done.  If you can come up with an imaginative
+   way of doing it then that is cool.  However, we don't encrypt the
+   HDD for a good reason, so if your exploit involves sticking in a
+   Live CD, then grabbing stuff it isn't going to win any prizes.
+
+- Social Engineering is Fine, try it, but be sure to shame the source.  
+
+- Exploits are there, a lot of you know the way we think now, certain
+  \magic words\ may lead to goodness.  There are also a lot of
+  services running. At the same time, big brother may (or may not) be
+  watching you, if you find something stick in a report (rather than
+  think you are l337 and keeping it to yourself).  Responsible
+  disclosure is a good thing.
+
+
+* Submitting Exploits
+
+A Two Stage process
+
+1) Submit an issue on the main GitHub page
+   [[https://github.com/djgoldsmith/EH-H2GH/issues]] This is your claim to
+   the exploit. (Note, If you spot a potential problem, but are not
+   sure how to exploit it, stick in a issue.  Perhaps someone else
+   will be happy to help you find that exploit)
+
+2) Do a write up for the Guide (see [[/contributing]]). Give details of
+   - BACKGROUND:  Why does this occur
+   - HOW: Step by step walk-through to complete it
+   - FIX: Suggestions / Patches to fix the issue.
+
+* Other Notes
+
+- We will be opening up the Lab infrastructure (except the FTK
+  machine), but it has to happen outside of teaching time.  Be
+  patient, you will get to test the imaging server.
+
+- Remember, it's your lab, doing something that screws it up will not
+  only impact the rest of the class, but you.  Be considerate, and
+  make sure everything is back in a workable state when you have
+  finished.
+
+
+* Prizes, Rewards and other shizzle.
+Its not just getting your name in print, there will be prizes and
+rewards.  Still under discussion with the Bosses, but it should be
+something good, stickers are also guaranteed for all those who take
+part.
+
+** Prizes
+ - Stickers
+ - (Rest TBC)
+
+** Categories
+
+  - Most interesting Exploit
+  - Rootiest exploit
+  - Best Write up
+  - .....

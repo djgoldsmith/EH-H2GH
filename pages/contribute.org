@@ -393,6 +393,8 @@ git checkout staging
 git merge upstream/staging
 #+END_SRC
 
+#+END_SRC
+
 
 * Worked Example:  
 Lets follow this through with an example,  and add outselves as a contributer to the guide.
