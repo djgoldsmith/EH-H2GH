@@ -139,6 +139,7 @@ NAVIGATION_LINKS = {
         ("/posts","Posts"),
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
+        ("/bounties", "Bug Bounties"),
         ("/rss.xml", "RSS feed"),
     ),
 }

@@ -95,6 +95,7 @@ git fetch upstream
 You can then Synchronsie the *master* and *staging* branches with the up to date version.
 
 #+BEGIN_SRC bash
+
 git checkout master
 git merge upstream/master
 
@@ -355,19 +356,47 @@ When we have finished everything, we need a way to merge the changes back into t
 
 For this we need to make a *pull request*
 
-On Github find your forked version of the repository.  Make sure you have selected the *correct branch* from the dropdown box.
+On Github find your forked version of the repository.  Make sure you have selected the *correct branch* (this should be staging) from the dropdown box.
 Thn hit the *new pull request* button.  (There is also a "You have recently pushed branches" popup.
 
 #+BEGIN_EXAMPLE
 NOTE:  A Picture would be good here.  Also get adam to check it works with Forks.
 #+END_EXAMPLE
 
-Complete the  form, and add a sensible comment in the comments box. Then hit the *create pull request* button
+Complete the  form, and add a sensible comment in the comments box. Then hit the *create pull request* button.
+If you are merging back into the *master* or *staging* branches, the pull reuest will not automatically be dealt with.
+However, after a quick review the code should be accepted into the main guide.
 
-TODO:  What happens at Master
+
+*** Cleaning up and getting ready to go again.
 
 
-** Worked Example:  
+Once the branch has been merged, ,it is good practice to clean it up.
+
+#+BEGIN_SRC bash
+git branch -d <name>
+#+END_SRC
+
+
+We may also want to grab the latest version of the guide from the trunk
+
+
+#+BEGIN_SRC bash
+#Add the Upstram repository (You may have done this already)
+git remote add upstream https://github.com/djgoldsmith/EH-H2GH.git
+#Fetch upstream data
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+git checkout staging
+git merge upstream/staging
+#+END_SRC
+
+#+END_SRC
+
+
+* Worked Example:  
 Lets follow this through with an example,  and add outselves as a contributer to the guide.
 
 WE first create a feature branch using a "sensible" name using /git branch/
@@ -452,5 +481,5 @@ Branch forking set up to track remote branch forking from origin.
 #+END_SRC
 
 
- 
-
+We have finished our work here so submit a pull request usinig the github webpage
+And wait for the work to be accepted.
